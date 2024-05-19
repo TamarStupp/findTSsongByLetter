@@ -638,11 +638,16 @@ const handleInputMissing = (event) => {
         filteredList = songs.filter(word => !missingLetters.some(letter => word.includes(letter)))
     }
 
-    document.getElementById('output').innerText = "";
-    filteredList.forEach(song => {
-        console.log(song);
-        document.getElementById('output').innerText += `${song} \n`;
-    });
+    if (filteredList.length > 0) {
+        document.getElementById('output').innerText = "";
+        filteredList.forEach(song => {
+            console.log(song);
+            document.getElementById('output').innerText += `${song} \n`;
+        });
+    } else {
+        document.getElementById('output').innerText = "no songs were found ):"
+    }
+    
 }
 
 const handleInputExist = () => {
@@ -657,5 +662,15 @@ const handleInputExist = () => {
             }
             return true
         })
+    }
+
+    document.getElementById('output').innerText = "";
+    if (filteredList.length > 0) {
+        filteredList.forEach(song => {
+            console.log(song);
+            document.getElementById('output').innerText += `${song} \n`;
+        });
+    } else {
+        document.getElementById('output').innerText = "no songs were found ):"
     }
 }
