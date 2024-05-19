@@ -645,7 +645,7 @@ const handleInputMissing = (event) => {
             document.getElementById('output').innerText += `${song} \n`;
         });
     } else {
-        document.getElementById('output').innerText = "no songs were found ):"
+        document.getElementById('output').innerText = "no songs were found :("
     }
     
 }
@@ -671,6 +671,6 @@ const handleInputExist = () => {
             document.getElementById('output').innerText += `${song} \n`;
         });
     } else {
-        document.getElementById('output').innerText = "no songs were found ):"
+        document.getElementById('output').innerText = "no songs were found :("
     }
 }
