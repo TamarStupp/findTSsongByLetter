@@ -8,11 +8,19 @@ input {
 input:valid {
     background-color: palegreen;
 }
-  
-  input:invalid {
-    background-color: lightpink;
-  }
 
-  * {
+input:invalid {
+    background-color: lightpink;
+}
+
+* {
     font-family: "Assistant";
-  }
+}
+
+label {
+    display: block;
+}
+
+body {
+    background-color: rgb(255 183 207);
+}
