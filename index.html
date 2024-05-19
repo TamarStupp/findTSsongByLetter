@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="index.js"></script>
+    </head>
+    <body>
+        <h1>title</h1>
+        <p>explanation</p>
+        <label for="existing-letters">enter the letters you have left</label>
+        <input type="text" name="existing-letters" id="existing-letters" pattern="[A-Za-z0-9 ,!?]{1,60}">
+        <button id="go-existing">generate</button>
+        <br>
+        <br>
+        <label for="missing-letters">enter the letters you are missing</label>
+        <input type="text" name="missing-letters" id="missing-letters" pattern="[A-Za-z0-9 ,!?]{1,60}">
+        <button id="go-missing">generate</button>
+
+        <div id="output"></div>
+    </body>
+</html>

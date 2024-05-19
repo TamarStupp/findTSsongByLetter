@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
+
+input {
+    border: 1px solid black;
+    border-radius: 0.2rem;
+}
+
+input:valid {
+    background-color: palegreen;
+}
+  
+  input:invalid {
+    background-color: lightpink;
+  }
+
+  * {
+    font-family: "Assistant";
+  }
