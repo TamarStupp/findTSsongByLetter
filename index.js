@@ -633,7 +633,7 @@ window.addEventListener('load', () => {
 
 const handleInputMissing = (event) => {
     if (document.getElementById('missing-letters').checkValidity()) {
-        let missingLetters = document.getElementById('missing-letters').value.replace(/[, ]/, '');
+        let missingLetters = document.getElementById('missing-letters').value.toLowerCase().replace(/[, ]/, '');
         missingLetters = missingLetters.split("");
         filteredList = songs.filter(word => !missingLetters.some(letter => word.includes(letter)))
     }
@@ -652,7 +652,7 @@ const handleInputMissing = (event) => {
 
 const handleInputExist = () => {
     if (document.getElementById('existing-letters').checkValidity()) {
-        let existingLetters = document.getElementById('existing-letters').value.replace(/[, ]/, '');
+        let existingLetters = document.getElementById('existing-letters').value.toLowerCase().replace(/[, ]/, '');
         existingLetters = existingLetters.split("");
         filteredList = songs.filter(word => {
             for (letter of word) {
