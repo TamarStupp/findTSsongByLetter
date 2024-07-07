@@ -1,30 +1,53 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <script src="index.js"></script>
-    </head>
-    <body>
-        <h1>title</h1>
-        <p>explanation</p>
-        <label for="existing-letters">enter the letters you have left</label>
-        <input type="text" name="existing-letters" id="existing-letters" pattern="[A-Za-z0-9 ,!?]{1,60}">
-        <button id="go-existing">generate</button>
-        <br>
-        <br>
-        <label for="missing-letters">enter the letters you are missing</label>
-        <input type="text" name="missing-letters" id="missing-letters" pattern="[A-Za-z0-9 ,!?]{1,60}">
-        <button id="go-missing">generate</button>
 
-        <div id="output"></div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+</head>
 
-        <br>
-        <footer>based on code snippet by <a href="https://www.tzepie.com/taylorswiftcode">tzepie</a>
-        created by Tamar Stupp</footer>
-    </body>
+<body class="scrollStyle">
+    <div class="bg-wrapper">
+        <div class="bg" id="bg"></div>
+    </div>
+    <h1 class="title">Find Taylor Swift song by Letters!</h1>
+    <div class="flex" id="MissingLetters">
+        <label class="explanation" for="missing-letters-input">Did you run out of letters? Which ones are missing?</label>
+        <div class="input-wrapper">
+            <input type="text" class="input" name="missing-letters" id="missing-letters-input" pattern="[A-Za-z0-9 ,!?]{1,60}"
+                placeholder="missing letters">
+            <div class="error">*Oops! It seems you entered something that is not a letter! 
+            </div>
+        </div>
+        <button class="generate" id="missing-letters-btn">Show me the songs</button>
+        <ul class="output"></ul>
+        <button class="goto">I have some letters left!</button>
+    </div>
+
+    
+    <div class="flex none" id="ExistingLetters">
+        <label class="explanation" for="existing-letters-input">Do you have a small amount of letters and wonder which song
+            fits?</label>
+        <div class="input-wrapper">
+            <input type="text" class="input" name="existing-letters" id="existing-letters-input"
+                pattern="[A-Za-z0-9 ,!?]{1,60}" placeholder="The letters you have left">
+            <div class="error">*Oops! It seems you entered something that is not a letter! 
+            </div>
+        </div>
+        <button class="generate" id="existing-letters-btn">Show me the songs</button>
+        <ul class="output"></ul>
+        <button class="goto">I am missing some letters!</button>
+    </div>
+    </div>
+    <footer>Created by Tamar Stupp based on code snippet by <a href="https://www.tzepie.com/taylorswiftcode">tzepie</a>
+    </footer>
+
+    </div>
+</body>
+
 </html>
