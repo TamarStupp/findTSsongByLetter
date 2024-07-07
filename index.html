@@ -20,7 +20,7 @@
         <label class="explanation" for="missing-letters-input">Did you run out of letters? Which ones are missing?</label>
         <div class="input-wrapper">
             <input type="text" class="input" name="missing-letters" id="missing-letters-input" pattern="[A-Za-z0-9 ,!?]{1,60}"
-                placeholder="missing letters">
+                placeholder="missing letters" required>
             <div class="error">*Oops! It seems you entered something that is not a letter! 
             </div>
         </div>
@@ -35,7 +35,7 @@
             fits?</label>
         <div class="input-wrapper">
             <input type="text" class="input" name="existing-letters" id="existing-letters-input"
-                pattern="[A-Za-z0-9 ,!?]{1,60}" placeholder="The letters you have left">
+                pattern="[A-Za-z0-9 ,!?]{1,60}" placeholder="The letters you have left" required>
             <div class="error">*Oops! It seems you entered something that is not a letter! 
             </div>
         </div>
