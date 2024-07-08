@@ -16,7 +16,19 @@
         <div class="bg" id="bg"></div>
     </div>
     <h1 class="title">Find Taylor Swift song by Letters!</h1>
-    <div class="flex" id="MissingLetters">
+    <div class="flex MissingLetters" id="container">
+        <label class="explanation" id="explanation" for="input">Did you run out of letters? Which ones are missing?</label>
+        <div class="input-wrapper">
+            <input type="text" class="input" name="input" id="input" pattern="[A-Za-z0-9 ,!?]{1,60}" required
+                placeholder="missing letters">
+            <div class="error"></div>
+        </div>
+        <button class="generate" id="generate">Show me the songs</button>
+        <ul class="output" id="output"></ul>
+        <button class="goto" id="goto">I have some letters left!</button>
+    </div>
+    
+    <!-- <div class="flex" id="MissingLetters">
         <label class="explanation" for="missing-letters-input">Did you run out of letters? Which ones are missing?</label>
         <div class="input-wrapper">
             <input type="text" class="input" name="missing-letters" id="missing-letters-input" pattern="[A-Za-z0-9 ,!?]{1,60}"
@@ -29,7 +41,7 @@
         <button class="goto">I have some letters left!</button>
     </div>
 
-    
+
     <div class="flex none" id="ExistingLetters">
         <label class="explanation" for="existing-letters-input">Do you have a small amount of letters and wonder which song
             fits?</label>
@@ -42,8 +54,8 @@
         <button class="generate" id="existing-letters-btn">Show me the songs</button>
         <ul class="output"></ul>
         <button class="goto">I am missing some letters!</button>
-    </div>
-    </div>
+    </div> -->
+
     <footer>Created by Tamar Stupp based on code snippet by <a href="https://www.tzepie.com/taylorswiftcode">tzepie</a>
     </footer>
 

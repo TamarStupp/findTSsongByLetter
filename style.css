@@ -54,40 +54,6 @@ button {
       background-color: #b27fc1; 
   }
 
-
-/* animations */
-.animate {
-    animation-duration: 0.5s;
-    animation-name: animate-fade;
-    animation-delay: 0.5s;
-    animation-fill-mode: backwards;
-  }
-  
-  @keyframes animate-fade {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  @keyframes backInDown {
-    0% {
-        -webkit-transform: translateY(-1200px) scale(.7);
-        transform: translateY(-1200px) scale(.7);
-        opacity: .7
-    }
-
-    80% {
-        -webkit-transform: translateY(0) scale(.7);
-        transform: translateY(0) scale(.7);
-        opacity: .7
-    }
-
-    to {
-        -webkit-transform: scale(1);
-        transform: scale(1);
-        opacity: 1
-    }
-}
-
 .bg-wrapper {
     height: 100vh;
     width: 100vw;
@@ -102,28 +68,28 @@ button {
     position: absolute;
     top: 0;
     width: 100%;
-    height: 17.3rem;
+    height: 16.8rem;
     transition: height 2s;
 }
 
-.high-bg {
+/* higher bg */
+body:has(.ExistingLetters) .bg {
     height: 120%;
 }
-
-.animate__backInDown {}
 
 .title {
     font-family: 'Segoe UI Black';
     padding-top: 0.3rem;
     padding-inline: 0.4rem;
     margin-top: 8px;
-    margin-bottom: 2.3em;
+    margin-bottom: 1.6em;
     font-size: 1.5rem;
     transition: margin 1.5s;
 }
 
-.disappear-margin {
-    margin-bottom: 0;
+/* smaller margin */
+.title:has(+.ExistingLetters) {
+    margin-bottom: 0.4rem;
 }
 
 .flex {
@@ -137,12 +103,12 @@ button {
     padding-inline: 1rem;
 }
 
-#MissingLetters {
+.MissingLetters {
     --generate-color: #FBB46D;
     --error-color: #AF0909;
 }
 
-#ExistingLetters {
+.ExistingLetters {
     --generate-color: #F0D4EC;
     --error-color: #9E0000;
     padding-bottom: 2rem;
@@ -159,7 +125,7 @@ button {
     padding: 0.5rem 1rem;
 }
 
-.error {
+.error::before {
     display: none;
     color: var(--error-color);
     font-size: 0.8em;
@@ -168,7 +134,16 @@ button {
     margin-top: 0.1rem;
 }
 
-.input-wrapper:has(.input:invalid) .error {
+/* Error messages. Used in before because I can't  */
+.input:not(:placeholder-shown)+.error::before {
+    content: "*Oops! It seems you entered something that is not a letter! "
+}
+
+.input:placeholder-shown+.error::before {
+    content: "The input is empty :(" !important;
+}
+
+.input-wrapper:has(.input:invalid) .error::before {
     display: block;
 }
 
@@ -237,7 +212,13 @@ footer {
         font-size: 2.4rem;
     }
 
-    .high-bg {
+    /* smaller margin */
+    .title:has(+.ExistingLetters) {
+        margin-bottom: 0rem;
+    }
+
+    /* higher bg */
+    body:has(.ExistingLetters) .bg {
         height: 116%;
     }
 
