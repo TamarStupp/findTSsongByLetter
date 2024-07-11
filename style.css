@@ -1,6 +1,6 @@
 html {
     font-size: calc(16px + 0.5vh);
-    font-family: "Segoe UI";
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
 }
 
@@ -79,9 +79,9 @@ body:has(.ExistingLetters) .bg {
 
 .title {
     font-family: 'Segoe UI Black';
-    padding-top: 0.3rem;
+    /* padding-top: 0.3rem; */
     padding-inline: 0.4rem;
-    margin-top: 8px;
+    /* margin-top: 8px; */
     margin-bottom: 1.6em;
     font-size: 1.5rem;
     transition: margin 1.5s;
@@ -201,6 +201,10 @@ footer {
         font-size: calc(10px + 1vh);
     }
 
+    body {
+        max-height: 100vh;
+    }
+
     .bg {
         background-size: 100% 20rem, 100% calc(102% - 20rem);
     }
@@ -227,6 +231,7 @@ footer {
         list-style-position: outside;
         column-count: 3;
         column-width: 16vw;
+        column-gap: 2em;
         padding-block: 1rem;
         padding-left: 8rem;
         box-sizing: border-box;

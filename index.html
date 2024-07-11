@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Find Taylor Swift song by Letters!🧡</title>
+    <title>Find Taylor Swift songs for making friendship braceletes!🧡</title>
+    <link rel="icon" type="image/image/svg+xm" href="./favicon.svg">
     <meta name="author" content="Tamar Stupp">
     <meta name="description" content="Did you make friendship bracelets and run out of some letters?  \n Do you have a small amount of letters left and wonder which song fits? You've reached the right place!">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,47 +22,18 @@
     <div class="bg-wrapper">
         <div class="bg" id="bg"></div>
     </div>
-    <h1 class="title">Find Taylor Swift song by Letters!</h1>
+    <h1 class="title" id="title">Find Taylor Swift Songs Without Some Letters!</h1>
     <div class="flex MissingLetters" id="container">
-        <label class="explanation" id="explanation" for="input">Did you run out of letters? Which ones are missing?</label>
+        <label class="explanation" id="explanation" for="input">Are you making friendship bracelets? Did you run out of letters? Which ones are missing?</label>
         <div class="input-wrapper">
             <input type="text" class="input" name="input" id="input" pattern="[A-Za-z0-9 ,!?]{1,60}" required
                 placeholder="missing letters">
             <div class="error"></div>
         </div>
-        <button class="generate" id="generate">Show me the songs</button>
+        <button class="generate" id="generate">Show me</button>
         <ul class="output" id="output"></ul>
         <button class="goto" id="goto">I have some letters left!</button>
     </div>
-    
-    <!-- <div class="flex" id="MissingLetters">
-        <label class="explanation" for="missing-letters-input">Did you run out of letters? Which ones are missing?</label>
-        <div class="input-wrapper">
-            <input type="text" class="input" name="missing-letters" id="missing-letters-input" pattern="[A-Za-z0-9 ,!?]{1,60}"
-                placeholder="missing letters" required>
-            <div class="error">*Oops! It seems you entered something that is not a letter! 
-            </div>
-        </div>
-        <button class="generate" id="missing-letters-btn">Show me the songs</button>
-        <ul class="output"></ul>
-        <button class="goto">I have some letters left!</button>
-    </div>
-
-
-    <div class="flex none" id="ExistingLetters">
-        <label class="explanation" for="existing-letters-input">Do you have a small amount of letters and wonder which song
-            fits?</label>
-        <div class="input-wrapper">
-            <input type="text" class="input" name="existing-letters" id="existing-letters-input"
-                pattern="[A-Za-z0-9 ,!?]{1,60}" placeholder="The letters you have left" required>
-            <div class="error">*Oops! It seems you entered something that is not a letter! 
-            </div>
-        </div>
-        <button class="generate" id="existing-letters-btn">Show me the songs</button>
-        <ul class="output"></ul>
-        <button class="goto">I am missing some letters!</button>
-    </div> -->
-
     <footer>Created by Tamar Stupp based on code snippet by <a href="https://www.tzepie.com/taylorswiftcode">tzepie</a>
     </footer>
 
